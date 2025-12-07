@@ -21,7 +21,24 @@ static const Worker_T INVALID_ID = (unsigned int)-1;
 
 
 // Add prototypes for any helper functions here
-
+void workerPut(bool ret, size_t day, size_t pos, std::vector<size_t> holder, 
+  const AvailabilityMatrix& avail,
+  const size_t dailyNeed, const size_t maxShifts,DailySchedule* sched){
+    if(ret){
+      return;
+    }
+    if(avail.size()==day){
+      ret=true;
+      return;
+    }
+    if(dailyNeed==pos){
+      pos=0;
+      return;
+    }
+    for(int i=0;i<avail[0].size();i++){
+      //if(avail[day][i]==true &&sched[pos]!=i)
+    }
+  }
 
 // Add your implementation of schedule() and other helper functions here
 
